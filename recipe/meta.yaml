@@ -1,5 +1,5 @@
 {% set name = "gcloud-aio-auth" %}
-{% set version = "5.0.0" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gcloud_aio_auth-{{ version }}.tar.gz
-  sha256: b7589706984b0ce1fc215eb21fd4d14b7dd17c3c9b51122dff83ee90b14a34f1
+  sha256: 4660d2c33f180eeb81f97a43e8b7c9aa98572f1c3f4413f280de77689ae0aa06
 
 build:
   noarch: python
