@@ -1,5 +1,5 @@
 {% set name = "gcloud-aio-auth" %}
-{% set version = "5.3.2" %}
+{% set version = "5.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gcloud_aio_auth-{{ version }}.tar.gz
-  sha256: 860a79de6f1a692b5fadcf27e4243d4128fa81823f177aeff926eba00b5c2255
+  sha256: ce0e4c72bbe4a015e60736b7cff13b67049d42b3dd87d66b567ac29d3613b6cf
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - aiohttp >=3.9.0,<4.0.0
     - backoff >=1.0.0,<3.0.0
     - chardet >=2.0,<6.0
-    - cryptography >=2.0.0,<45.0.0
+    - cryptography >=2.0.0,<47.0.0
     - pyjwt >=1.5.3,<3.0.0
 
 test:
