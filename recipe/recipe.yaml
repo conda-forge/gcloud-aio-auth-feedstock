@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: gcloud-aio-auth
-  version: 5.4.2
+  version: 5.4.4
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/gcloud_aio_auth-${{ version }}.tar.gz
-  sha256: 184478d081f7cfbb6eff421c22d877d48d17811fa88b269f0c016f5528b3fa31
+  sha256: 70b8c6edf8655003251905372e6815a24ab839bf201788a903964570e9b4091f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -34,13 +34,8 @@ tests:
   - python:
       imports:
         - gcloud.aio.auth
+      pip_check: true
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
 
 about:
   summary: Python Client for Google Cloud Auth
