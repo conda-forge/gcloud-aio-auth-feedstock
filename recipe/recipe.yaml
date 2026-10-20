@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: gcloud-aio-auth
-  version: "5.5.3"
+  version: "5.6.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/gcloud_aio_auth-${{ version }}.tar.gz
-  sha256: 7973d99a3efd79303ee9a924df2d4a4bcb4b2c9c1edce7d6ca63a060f724096d
+  sha256: c4bd6d2335ac5376d2f5e2f86830a35385c511412fa1c2e138333038b1346ff7
 
 build:
   number: 0
